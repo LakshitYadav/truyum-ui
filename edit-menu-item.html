@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Edit Menu Item</title>
+        <link rel="stylesheet" href="style/styles.css">
+        <script src="js/script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="head">
+                <label for="label" id="label">truYum</label>
+            </div>
+            <div class="logo">
+                <img src="images/logo.png" id="logoImage">
+            </div>
+            <div class="navDiv">
+                <nav>
+                    <ul class="option">
+                        <li><a id="linkColor" href="menu-item-list-admin.html">Menu</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <h1>Edit Menu Item</h1>
+        <br>
+
+        <form action="edit-menu-item-status.html">
+            <table>
+                <tr>
+                    <th><label for="title">Name</label></th>
+                </tr>
+                <tr>
+                    <td id="width"><input type="text" name="title" id="title"
+                        min="2" max="65" required></td>
+                </tr>
+                <tr>
+                    <th id="border1"><label for="price">Price(in Rs.)</label></th>
+                    <th id="border1"><label for="inStock">Active</label></th>
+                    <th id="border1"><label for="dateOfLaunch">Date of
+                            Launch</label></th>
+                    <th id="border1"><label for="category">Category</label></th>
+                <tr>
+                    <td><input type="text" name="price"
+                        id="price" pattern="[0-9]+" size="5px" required></td>
+                    <td ><input type="radio" name="inStock"
+                        id="yesinStock" required> <span>Yes</span> <input
+                        type="radio" name="inStock" id="noinStock" required> <span
+                        >No</span></td>
+                    <td ><input type="date" name="dateOfLaunch"
+                        id="dateOfLaunch" size="18px" placeholder="dd/mm/yyyy"
+                        onchange="messageDisplay()" required></td>
+                    <td ><select name="category" id="category" required>
+                            <option value="Starters">Starters</option>
+                            <option value="Main Course">Main Course</option>
+                            <option value="Desserts">Desserts</option>
+                            <option value="Drinks">Drinks</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td id="border1"><input type="checkbox" name="freeDelivery"
+                        id="freeDelivery"> <label for="freeDelivery">Free
+                            Delivery</label></td>
+                </tr>
+
+                <tr>
+                    <th id="border"><input type="submit" name="submit" id="submit"
+                        value="Save"></th>
+                </tr>
+            </table>
+        </form>
+
+        <footer>Copyright &copy; 2019</footer>
+    </body>
+</html>
